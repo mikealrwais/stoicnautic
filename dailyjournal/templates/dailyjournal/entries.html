@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entries</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Entry List</h1>
+    <div class="entries">
+        {% for entry in entries %}
+        <div class="entry">
+            <h2><a href="">{{ entry.title }}</a></h2>
+            <p> {{ entry.snippet }}</p>
+            <p> {{ entry.date }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
