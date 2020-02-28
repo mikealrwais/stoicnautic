@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from .models import Entry
 
 def entry_list(request):
@@ -7,3 +7,6 @@ def entry_list(request):
         'entries': entries,
     }
     return render(request, 'dailyjournal/entries.html', context)
+
+def entry_detail(request,slug):
+    return HttpResponse(slug)
