@@ -6,7 +6,7 @@
     <div class="entries">
         {% for entry in entries %}
         <div class="entry">
-            <h2><a href="">{{ entry.title }}</a></h2>
+            <h2><a href="{% url 'dailyjournal:detail' slug=entry.slug %}">{{ entry.title }}</a></h2>
             <p> {{ entry.snippet }}</p>
             <p> {{ entry.date }}</p>
         </div>

@@ -9,4 +9,9 @@ def entry_list(request):
     return render(request, 'dailyjournal/entries.html', context)
 
 def entry_detail(request,slug):
-    return HttpResponse(slug)
+    entry = Entry.objects.get(slug=slug)
+    context = {
+        'entry' : entry,
+    }
+    
+    return render(request, 'dailyjournal/entry.html', context)
