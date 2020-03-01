@@ -5,7 +5,7 @@ class Entry(models.Model):
     slug = models.SlugField()
     body = models.TextField(max_length=300)
     date = models.DateField(auto_now_add=True)
-    # add in thumbnail later
+    thumb = models.ImageField(default='default.png',blank=True)
     # add in author later
     
     def __str__(self):

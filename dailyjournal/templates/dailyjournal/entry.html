@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Entry {{ entry.date }} </h1>
+    <h4><a href="/dailyjournal/">Go Back</a></h4>
+    <h1>Entry for {{ entry.date }} </h1>
     <div class="entry">
         <h2>{{ entry.title }}</a></h2>            
         <p> {{ entry.body }}</p>
+        <p><img src="{{ entry.thumb.url }}"></p>
     </div>
 {% endblock %}   
